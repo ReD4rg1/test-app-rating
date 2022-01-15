@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60px 200px 200px 150px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.avatar {
+    display: flex;
+}
+
+.avatar img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.container input {
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: white 2px solid;
+    background: #282c34;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s ease 0s;
+    margin-left: 10px;
+}
+
+.buttons button:hover {
+    background: #383d48;
+}
+
+.buttons button:disabled {
+    padding: 8px;
+    border-radius: 5px;
+    border: black 2px solid;
+    color: black;
+    cursor: auto;
+}
+
+/*-----------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 6% 20% 20% 15%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 0;
+    }
+    .avatar img {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+    }
+    .buttons button {
+        padding: 2px;
+        margin: 2px;
+        font-size: 12px;
+    }
+    .container input {
+        padding: 2px;
+        margin: 0;
+        font-size: 12px;
+    }
+}
